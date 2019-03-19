@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include nav.html -%}
+
+    <div class="container">
+
+
+      {{ content }}
+
+
+    </div>
+
+    {%- include footer.html -%}
+
+
+    {%- if page.navPage == 'home' -%}
+      <script language="javascript">
+        $('#home').addClass('active');
+      </script>
+    {%- endif -%}
+
+    {%- if page.navPage == 'library' -%}
+      <script language="javascript">
+        $('#library').addClass('active');
+      </script>
+    {%- endif -%}
+
+    {%- if page.navPage == 'giveBack' -%}
+      <script language="javascript">
+        $('#giveBack').addClass('active');
+      </script>
+    {%- endif -%}
+
+    {%- if page.navPage == 'purchase' -%}
+      <script language="javascript">
+        $('#purchase').addClass('active');
+      </script>
+    {%- endif -%}
+
+
+  </body>
+
+</html>
